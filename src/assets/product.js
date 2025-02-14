@@ -12,9 +12,6 @@ import neem_2 from './Neem Powder/neem powder2-page-002.jpg'
 import neem_3 from './Neem Powder/neem powder2-page-003.jpg'
 import neem_4 from './Neem Powder/neem 1-images-0.jpg'
 import neem_5 from './Neem Powder/neem 1-images-1.jpg'
-import Methi1 from './Methi/meethi-images-0.jpg'
-import Methi2 from './Methi/meethi-images-2.jpg'
-import Methi3 from './methi/meethi-images-1.jpg'
 import pumpkin1 from './pumpkin/11_page-0002.jpg'
 import pumpkin2 from './pumpkin/11_page-0001.jpg'
 import pumpkin3 from './pumpkin/11_page-0003.jpg'
@@ -100,16 +97,6 @@ let products = [
      pumpkin3,
      pumpkin4,
      pumpkin5
-    ],
-  },
-  {
-    id: 7,
-    name: "Methi",
-    price: "₹190",
-    images: [ 
-    Methi1,
-    Methi2,
-    Methi3
     ],
   },
 ];
