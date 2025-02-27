@@ -3,6 +3,44 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
+// Custom Next Arrow Component
+function NextArrow(props) {
+  const { className, style, onClick } = props;
+  return (
+    <div
+      className={className}
+      style={{
+        ...style,
+        display: "block",
+        right: "10px",
+        zIndex: 1,
+        // Optional: Adjust the color or size
+        color: "black",
+      }}
+      onClick={onClick}
+    />
+  );
+}
+
+// Custom Previous Arrow Component
+function PrevArrow(props) {
+  const { className, style, onClick } = props;
+  return (
+    <div
+      className={className}
+      style={{
+        ...style,
+        display: "block",
+        left: "10px",
+        zIndex: 1,
+        // Optional: Adjust the color or size
+        color: "black",
+      }}
+      onClick={onClick}
+    />
+  );
+}
+
 const ImageSlider = ({ images }) => {
   const settings = {
     dots: true,
@@ -10,7 +48,9 @@ const ImageSlider = ({ images }) => {
     speed: 500,
     slidesToShow: 1,
     slidesToScroll: 1,
-    arrows: true,
+    arrows: true,           
+    nextArrow: <NextArrow />, 
+    prevArrow: <PrevArrow />, 
   };
 
   return (
@@ -18,7 +58,11 @@ const ImageSlider = ({ images }) => {
       <Slider {...settings}>
         {images.map((img, index) => (
           <div key={index}>
-            <img src={img} alt={`Product View ${index + 1}`} className="main-img" />
+            <img
+              src={img}
+              alt={`Product View ${index + 1}`}
+              className="main-img"
+            />
           </div>
         ))}
       </Slider>

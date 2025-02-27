@@ -1,8 +1,8 @@
 import aloevera_front from './Alovera/Copy of Green Traditional And Elegant Ayurvedic Medicine Poster-images-0.jpg'
 import alovera_2 from './Alovera/Copy of Green Traditional And Elegant Ayurvedic Medicine Poster-images-1.jpg'
-import alovera_3 from './Alovera/Copy of Green Traditional And Elegant Ayurvedic Medicine Poster-images-1.jpg'
-import alovera_4 from './Alovera/Copy of Green Traditional And Elegant Ayurvedic Medicine Poster-images-1.jpg'
-import alovera_5 from './Alovera/Copy of Green Traditional And Elegant Ayurvedic Medicine Poster-images-1.jpg'
+import alovera_3 from './Alovera/Copy of Green Traditional And Elegant Ayurvedic Medicine Poster-images-2.jpg'
+import alovera_4 from './Alovera/Copy of Green Traditional And Elegant Ayurvedic Medicine Poster-images-3.jpg'
+import alovera_5 from './Alovera/Copy of Green Traditional And Elegant Ayurvedic Medicine Poster-images-4.jpg'
 import mitti_front from './Multani mitti/Brown and Gray Minimalist Packaging  Mockup Pinterset Pin.pdf.jpg'
 import mitti_2 from './Multani mitti/Minimal Green Ayurvedic Products Promotion Flyer.pdf 2.pdf.jpg'
 import mitti_3 from './Multani mitti/White Minimalist Tips How To Use Serum Product Instagram Post.pdf 2-page-001.jpg'
@@ -12,9 +12,6 @@ import neem_2 from './Neem Powder/neem powder2-page-002.jpg'
 import neem_3 from './Neem Powder/neem powder2-page-003.jpg'
 import neem_4 from './Neem Powder/neem 1-images-0.jpg'
 import neem_5 from './Neem Powder/neem 1-images-1.jpg'
-import Methi1 from './methi/meethi-images-0.jpg'
-import Methi2 from './methi/meethi-images-2.jpg'
-import Methi3 from './methi/meethi-images-2.jpg'
 import pumpkin1 from './pumpkin/11_page-0002.jpg'
 import pumpkin2 from './pumpkin/11_page-0001.jpg'
 import pumpkin3 from './pumpkin/11_page-0003.jpg'
@@ -47,7 +44,7 @@ let products = [
     id: 2,
     name: "Multani Mitti Face Pack",
     price: "₹178",
-    images: [  // changed from 'image' to 'images'
+    images: [ 
       mitti_front,
       mitti_2,
       mitti_3,
@@ -58,7 +55,7 @@ let products = [
     id: 3,
     name: "Neem Powder",
     price: "₹249",
-    images: [  // changed from 'image' to 'images'
+    images: [ 
       neem_front,
       neem_2,
       neem_3,
@@ -70,7 +67,7 @@ let products = [
     id: 4,
     name: "Gond For Ladoo",
     price: "₹198",
-    images: [  // changed from 'image' to 'images'
+    images: [  
      Gond1,
      Gond2,
      Gond3,
@@ -82,7 +79,7 @@ let products = [
     id: 5,
     name: "Chia Seeds",
     price: "₹152",
-    images: [  // changed from 'image' to 'images'
+    images: [ 
      chia1,
      chia2,
      chia3,
@@ -94,22 +91,12 @@ let products = [
     id: 6,
     name: "Pumpkin Seeds",
     price: "₹236",
-    images: [  // changed from 'image' to 'images'
+    images: [  
      pumpkin1,
      pumpkin2,
      pumpkin3,
      pumpkin4,
      pumpkin5
-    ],
-  },
-  {
-    id: 7,
-    name: "Methi",
-    price: "₹190",
-    images: [  // changed from 'image' to 'images'
-    Methi1,
-    Methi2,
-    Methi3
     ],
   },
 ];
