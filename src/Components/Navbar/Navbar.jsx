@@ -7,7 +7,7 @@ const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   // const [user, setUser] = useState(null);
 
-  // Retrieve user details from localStorage on component mount
+  // Retrieve user details from localStorage on component moun
   useEffect(() => {
     const storedUser = localStorage.getItem("user");
     if (storedUser) {
