@@ -21,6 +21,9 @@ const Navbar = () => {
         <div className="container mx-auto py-2 flex justify-between items-center">
         
           <img src={logo} alt="Logo" className="w-35 h-20 object-contain" />
+            <Link className="text-2xl font-semibold" to="/cart">
+              <img src={cart_icon} alt="Cart" />
+            </Link> 
 
 
           <button className="md:hidden p-2 rounded-md"
