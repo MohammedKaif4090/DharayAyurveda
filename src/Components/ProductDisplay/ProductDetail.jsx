@@ -51,7 +51,7 @@ const ProductDetail = () => {
   };
 
   return (
-    <div className="container mx-auto mt-24 p-6">
+    <div className="container mx-auto p-6">
       <div className="flex flex-col md:flex-row gap-6">
         {/* Product Images */}
         <div className="md:w-1/2">
