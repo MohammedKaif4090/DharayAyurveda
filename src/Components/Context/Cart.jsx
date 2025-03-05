@@ -48,7 +48,7 @@ const Cart = () => {
     console.log("Submitting order data:", orderData);
 
     try {
-      const response = await fetch("https://dharayayurvedas.onrender.com", {
+      const response = await fetch("https://dharayayurvedas.onrender.com/api/orders", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
