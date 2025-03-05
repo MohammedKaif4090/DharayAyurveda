@@ -12,7 +12,7 @@ const Header = () => {
   return (
     <div className="w-full">
       {/* Swiper Carousel */}
-      <section className="mt-[80px] w-full">
+      <section className="w-full">
         <Swiper
           modules={[Navigation, Pagination, Autoplay]}
           spaceBetween={10}
