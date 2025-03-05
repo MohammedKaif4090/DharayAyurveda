@@ -5,7 +5,7 @@ import cart_icon from '../../assets/cart_icon.png';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const [user, setUser] = useState(null);
+  // const [user, setUser] = useState(null);
 
   // Retrieve user details from localStorage on component mount
   useEffect(() => {
@@ -19,18 +19,15 @@ const Navbar = () => {
     <div className="w-full">
       <header className="top-0 left-0 w-full bg-green-100 shadow-md z-50 static">
         <div className="container mx-auto py-2 flex justify-between items-center">
-          {/* Logo */}
+        
           <img src={logo} alt="Logo" className="w-35 h-20 object-contain" />
 
-          {/* Mobile Menu Button */}
-          <button
-            className="md:hidden p-2 rounded-md"
-            onClick={() => setIsOpen(!isOpen)}
-          >
+
+          <button className="md:hidden p-2 rounded-md"
+            onClick={() => setIsOpen(!isOpen)}>
             ☰
           </button>
 
-          {/* Desktop Nav */}
           <nav className="hidden md:flex items-center space-x-6">
             <Link
               style={{ textDecoration: "none", color: "#14532d" }}
@@ -39,7 +36,7 @@ const Navbar = () => {
             >
               Home
             </Link>
-            {user ? (
+{/*             {user ? (
               // Show the first letter of user's name
               <div className="flex items-center">
                 <div className="w-10 h-10 bg-blue-500 text-white rounded-full flex items-center justify-center text-xl font-bold">
@@ -52,10 +49,10 @@ const Navbar = () => {
                   Login
                 </button>
               </Link>
-            )}
+            )} */}
             <Link className="text-2xl font-semibold" to="/cart">
               <img src={cart_icon} alt="Cart" />
-            </Link>
+            </Link> 
           </nav>
         </div>
       </header>
@@ -80,7 +77,7 @@ const Navbar = () => {
                   Home
                 </Link>
               </li>
-              <li className="border-b border-gray-300 pb-2">
+{/*               <li className="border-b border-gray-300 pb-2">
                 {user ? (
                   <div className="flex items-center">
                     <div className="w-10 h-10 bg-blue-500 text-white rounded-full flex items-center justify-center text-xl font-bold">
@@ -94,9 +91,9 @@ const Navbar = () => {
                     to="/Login"
                   >
                     Login
-                  </Link>
+                  </Link> 
                 )}
-              </li>
+              </li>*/}
             </ul>
           </div>
         </div>
