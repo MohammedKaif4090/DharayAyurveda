@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import logo from "../../assets/logo/Untitled_design.pdf_page-0001-removebg-preview (1).png";
-import cart_icon from '../../assets/cart_icon.png';
+import cart_icon from "../../assets/cart_icon.png";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -22,13 +22,18 @@ const Navbar = () => {
           {/* Logo */}
           <img src={logo} alt="Logo" className="w-35 h-20 object-contain" />
 
-          {/* Mobile Menu Button */}
-          <button
-            className="md:hidden p-2 rounded-md"
-            onClick={() => setIsOpen(!isOpen)}
-          >
-            ☰
-          </button>
+          {/* Mobile Right-Side: Cart Icon & Menu Button */}
+          <div className="flex items-center space-x-2 md:hidden">
+            <Link to="/cart" className="block">
+              <img src={cart_icon} alt="Cart" className="w-6 h-6" />
+            </Link>
+            <button
+              className="p-2 rounded-md"
+              onClick={() => setIsOpen(!isOpen)}
+            >
+              ☰
+            </button>
+          </div>
 
           {/* Desktop Nav */}
           <nav className="hidden md:flex items-center space-x-6">
@@ -39,19 +44,12 @@ const Navbar = () => {
             >
               Home
             </Link>
-            {user ? (
-              // Show the first letter of user's name
+            {user && (
               <div className="flex items-center">
                 <div className="w-10 h-10 bg-blue-500 text-white rounded-full flex items-center justify-center text-xl font-bold">
                   {user.name.charAt(0).toUpperCase()}
                 </div>
               </div>
-            ) : (
-              <Link className="text-2xl font-semibold" to="/Login">
-                <button style={{ textDecoration: "none", color: "#14532d" }}>
-                  Login
-                </button>
-              </Link>
             )}
             <Link className="text-2xl font-semibold" to="/cart">
               <img src={cart_icon} alt="Cart" />
@@ -81,22 +79,23 @@ const Navbar = () => {
                 </Link>
               </li>
               <li className="border-b border-gray-300 pb-2">
-                {user ? (
+                <Link
+                  style={{ textDecoration: "none" }}
+                  className="text-gray-700 text-lg block p-2 rounded-lg hover:bg-green-200 transition"
+                  to="/cart"
+                >
+                  Cart
+                </Link>
+              </li>
+              {user && (
+                <li className="border-b border-gray-300 pb-2">
                   <div className="flex items-center">
                     <div className="w-10 h-10 bg-blue-500 text-white rounded-full flex items-center justify-center text-xl font-bold">
                       {user.name.charAt(0).toUpperCase()}
                     </div>
                   </div>
-                ) : (
-                  <Link
-                    style={{ textDecoration: "none" }}
-                    className="text-gray-700 text-lg block p-2 rounded-lg hover:bg-green-200 transition"
-                    to="/Login"
-                  >
-                    Login
-                  </Link>
-                )}
-              </li>
+                </li>
+              )}
             </ul>
           </div>
         </div>

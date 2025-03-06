@@ -57,19 +57,18 @@ const ProductDetail = () => {
         <div className="md:w-1/2">
           <ImageSlider images={product.images} />
         </div>
+       
         {/* Product Details & Add to Cart */}
         <div className="md:w-1/2">
           <h2 className="text-3xl font-bold mb-4">{product.name}</h2>
           <p className="text-xl text-gray-700">
             Price:{" "}
             <span className="font-semibold">
-              {product.price || "Contact for price"}
+              {product.price|| "Contact for price"}/200gm
             </span>
           </p>
           <p className="mt-4 text-gray-600">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
-            dignissim, nisl non bibendum sodales, sapien urna ultricies libero,
-            a tempor ligula urna non quam.
+           {product.Description}
           </p>
           <div className="mt-6 flex items-center">
             <label

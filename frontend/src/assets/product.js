@@ -27,10 +27,14 @@ import chia2 from './Chia seeds/Minimal Green Ayurvedic Products Promotion Flyer
 import chia3 from './Chia seeds/Minimal Green Ayurvedic Products Promotion Flyer.pdf-page-002.jpg'
 import chia4 from './Chia seeds/White Minimalist Tips How To Use Serum Product Instagram Post.pdf-page-001.jpg'
 import chia5 from './Chia seeds/White Minimalist Tips How To Use Serum Product Instagram Post.pdf-page-002.jpg'
+import methi from './Methi/meethi-images-0.jpg'
+import methi1 from './Methi/meethi-images-1.jpg'
+import methi2 from './Methi/meethi-images-2.jpg'
 let products = [
   {
     id: 1,
     name: "Organic Aloe Vera Gel",
+    Description : "Aloe vera is a succulent plant widely recognized in Ayurveda for its soothing and healing properties. Its gel is used both externally and internally to aid in skin hydration, wound healing, and detoxification. ",
     price: "₹199",
     images: [
       aloevera_front,
@@ -43,6 +47,7 @@ let products = [
   {
     id: 2,
     name: "Multani Mitti Face Pack",
+    Description : "Multani Mitti is a natural clay prized in Ayurveda for its ability to absorb excess oil, cleanse the skin, and improve complexion. It is commonly used in facial masks to remove impurities, control acne, and brighten the skin.",
     price: "₹178",
     images: [ 
       mitti_front,
@@ -54,6 +59,7 @@ let products = [
   {
     id: 3,
     name: "Neem Powder",
+    Description : "Neem powder, made from dried neem leaves, is renowned for its potent antibacterial, antifungal, and anti-inflammatory properties. In Ayurvedic practice, neem is used to purify the blood, support skin health, and promote a clear, glowing complexion",
     price: "₹249",
     images: [ 
       neem_front,
@@ -66,6 +72,7 @@ let products = [
   {
     id: 4,
     name: "Gond For Ladoo",
+    Description : "Gond refers to a type of edible gum obtained from acacia or similar trees. In Ayurveda, it is often incorporated into ladoos (traditional sweets) to provide strength and nourishment, especially during colder months.",
     price: "₹198",
     images: [  
      Gond1,
@@ -78,6 +85,7 @@ let products = [
   {
     id: 5,
     name: "Chia Seeds",
+    Description : "Although originally native to Central and South America, chia seeds have been embraced in Ayurvedic-inspired diets for their high nutritional content.",
     price: "₹152",
     images: [ 
      chia1,
@@ -90,6 +98,7 @@ let products = [
   {
     id: 6,
     name: "Pumpkin Seeds",
+    Description : "Pumpkin seeds are a nutrient-dense food packed with protein, healthy fats, and essential minerals like magnesium, zinc, and iron.",
     price: "₹236",
     images: [  
      pumpkin1,
@@ -97,6 +106,17 @@ let products = [
      pumpkin3,
      pumpkin4,
      pumpkin5
+    ],
+  },
+  {
+    id: 7,
+    name: "Methi",
+    Description : "Methi, or fenugreek, is a herb with a distinct bitter taste and a rich tradition in Ayurveda. It is celebrated for its digestive benefits, ability to balance blood sugar levels, and support for lactation in nursing mothers. ",
+    price: "₹190",
+    images: [  
+     methi,
+     methi1,
+     methi2
     ],
   },
 ];
