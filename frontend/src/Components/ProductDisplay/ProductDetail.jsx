@@ -1,5 +1,5 @@
 import React, { useState, useContext } from "react";
-import { useParams } from "react-router-dom";
+import { useParams, useNavigate } from "react-router-dom"; // Import useNavigate
 import { CartContext } from "../Context/CartContext.jsx";
 import products from "../../assets/product.js";
 import ImageSlider from "../ProductDisplay/ImageSlider.jsx";
@@ -8,16 +8,14 @@ import Star_dull from "../../assets/star_dull_icon.png";
 
 const ProductDetail = () => {
   const { id } = useParams();
+  const navigate = useNavigate(); // Initialize useNavigate
   const product = products.find((item) => item.id === parseInt(id));
   const { addToCart } = useContext(CartContext);
   const [quantity, setQuantity] = useState(1);
 
-  // For displaying a message when a product is added to the cart
   const [cartMessage, setCartMessage] = useState("");
-
-  // Review state
   const [reviews, setReviews] = useState([]);
-  const [rating, setRating] = useState(0); // default is 0, so all stars are dull initially
+  const [rating, setRating] = useState(0);
   const [comment, setComment] = useState("");
 
   if (!product)
@@ -30,24 +28,11 @@ const ProductDetail = () => {
   const handleAddToCart = () => {
     addToCart(product, quantity);
     setCartMessage("Product added to cart!");
-    // Remove the message after 3 seconds
-    setTimeout(() => {
-      setCartMessage("");
-    }, 3000);
-  };
 
-  const handleReviewSubmit = (e) => {
-    e.preventDefault();
-    const newReview = {
-      id: Date.now(),
-      rating,
-      comment,
-      date: new Date().toLocaleDateString(),
-    };
-    setReviews([...reviews, newReview]);
-    // Reset the review form fields
-    setRating(0);
-    setComment("");
+    // Redirect to cart page after a short delay
+    setTimeout(() => {
+      navigate("/cart");
+    }, 1000); // Redirect after 1 second
   };
 
   return (
@@ -64,17 +49,12 @@ const ProductDetail = () => {
           <p className="text-xl text-gray-700">
             Price:{" "}
             <span className="font-semibold">
-              {product.price|| "Contact for price"}/200gm
+              {product.price || "Contact for price"}/200gm
             </span>
           </p>
-          <p className="mt-4 text-gray-600">
-           {product.Description}
-          </p>
+          <p className="mt-4 text-gray-600">{product.Description}</p>
           <div className="mt-6 flex items-center">
-            <label
-              htmlFor="quantity"
-              className="mr-3 text-lg font-medium mb-4 mt-3"
-            >
+            <label htmlFor="quantity" className="mr-3 text-lg font-medium mb-4 mt-3">
               Quantity:
             </label>
             <input
@@ -94,76 +74,6 @@ const ProductDetail = () => {
           </button>
           {cartMessage && (
             <p className="mt-2 text-green-600 font-medium">{cartMessage}</p>
-          )}
-        </div>
-      </div>
-
-      {/* Review Section */}
-      <div className="mt-12">
-        <h3 className="text-2xl font-bold mb-4">Customer Reviews</h3>
-        {/* Review Form */}
-        <form onSubmit={handleReviewSubmit} className="mb-6">
-          <div className="flex flex-col md:flex-row gap-4">
-            <div className="flex flex-col">
-              <label className="mb-2 font-medium">Rating:</label>
-              <div className="flex">
-                {[1, 2, 3, 4, 5].map((star) => (
-                  <img
-                    key={star}
-                    src={rating >= star ? Star : Star_dull}
-                    alt={`${star} star`}
-                    onClick={() => setRating(star)}
-                    className="cursor-pointer w-8 h-8"
-                  />
-                ))}
-              </div>
-            </div>
-            <div className="flex flex-col md:w-1/2">
-              <label htmlFor="comment" className="mb-2 font-medium">
-                Review:
-              </label>
-              <textarea
-                id="comment"
-                value={comment}
-                onChange={(e) => setComment(e.target.value)}
-                rows="4"
-                placeholder="Write your review here..."
-                className="w-full p-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
-                required
-              ></textarea>
-            </div>
-          </div>
-          <button
-            type="submit"
-            className="mt-4 bg-green-200 text-black font-semibold py-2 px-4 rounded-md hover:bg-green-600 transition"
-          >
-            Submit Review
-          </button>
-        </form>
-
-        {/* Display Reviews */}
-        <div>
-          {reviews.length === 0 ? (
-            <p className="text-gray-600">No reviews yet.</p>
-          ) : (
-            reviews.map((rev) => (
-              <div key={rev.id} className="border p-4 rounded-md mb-4">
-                <div className="flex items-center mb-2">
-                  <div className="flex">
-                    {[1, 2, 3, 4, 5].map((star) => (
-                      <img
-                        key={star}
-                        src={rev.rating >= star ? Star : Star_dull}
-                        alt={`${star} star`}
-                        className="w-6 h-6"
-                      />
-                    ))}
-                  </div>
-                  <span className="text-gray-500 text-sm ml-2">{rev.date}</span>
-                </div>
-                <p className="text-gray-700">{rev.comment}</p>
-              </div>
-            ))
           )}
         </div>
       </div>
