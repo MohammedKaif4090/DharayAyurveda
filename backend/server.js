@@ -16,7 +16,6 @@ app.use((req, res, next) => {
   next();
 });
 
-// Use MongoDB URI from environment variables
 const MONGO_URI = process.env.MONGO_URI;
 
 // Connect to MongoDB
