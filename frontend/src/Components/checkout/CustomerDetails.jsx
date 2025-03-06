@@ -6,7 +6,7 @@ const CustomerDetails = () => {
   const [error, setError] = useState(null);
 
   useEffect(() => {
-    fetch("http://localhost:5000/api/orders")
+    fetch("https://dharayayurved.onrender.com/api/orders")
       .then((res) => {
         if (!res.ok) {
           throw new Error("Failed to fetch orders");
