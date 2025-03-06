@@ -1,6 +1,5 @@
 import React, { useContext, useState } from "react";
 import { CartContext } from "./CartContext.jsx";
-import { useNavigate } from "react-router-dom";
 
 const Cart = () => {
   const { cartItems, removeFromCart, clearCart } = useContext(CartContext);
@@ -10,7 +9,6 @@ const Cart = () => {
   const [address, setAddress] = useState("");
   const [contact, setContact] = useState("");
   const [contactError, setContactError] = useState("");
-  const navigate = useNavigate();
 
   // Debug: log current cart items
   console.log("Cart Items:", cartItems);
@@ -36,12 +34,12 @@ const Cart = () => {
     }
     setContactError("");
 
-    // IMPORTANT: Use "cartItems" to match the server schema
+    // Use "cartItems" to match the server schema
     const orderData = {
       name,
       address,
       contact,
-      cartItems: cartItems, // Updated field name here
+      cartItems: cartItems,
       totalPrice,
     };
 
@@ -55,7 +53,7 @@ const Cart = () => {
         },
         body: JSON.stringify(orderData),
       });
-      
+
       console.log("Response status:", response.status);
       const responseBody = await response.json();
       console.log("Response body:", responseBody);
@@ -65,7 +63,7 @@ const Cart = () => {
         setSubmitted(true);
         setCheckoutVisible(false);
         clearCart();
-        navigate("/customers");
+        // Removed navigation to "/customers"
       } else {
         console.error("Failed to submit order:", responseBody);
       }
