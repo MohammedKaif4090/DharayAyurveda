@@ -69,6 +69,9 @@ const Navbar = () => {
               ✖
             </button>
             <ul className="mt-5 space-y-4 px-6">
+              <li>
+              <img src={logo} alt="Logo" className="w-30 h-18 object-contain ml-10 " />
+              </li>
               <li className="border-b border-gray-300 pb-2">
                 <Link
                   style={{ textDecoration: "none" }}
