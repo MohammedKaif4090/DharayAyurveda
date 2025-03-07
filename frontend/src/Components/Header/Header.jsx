@@ -34,7 +34,6 @@ const Header = () => {
               </p>
             </div>
 
-               {/* Right Section: Image */}
                <div className="w-full md:w-1/2 flex justify-center m-11">
                 <img
                   src={pumpkin}
