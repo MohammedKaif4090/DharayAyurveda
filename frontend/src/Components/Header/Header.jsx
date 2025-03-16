@@ -36,7 +36,7 @@ const Header = () => {
             </div>
 
               {/* Right Section: Image */}
-              <div className="w-full md:w-1/2 flex justify-center m-11">
+              <div className="w-full md:w-1/2 flex justify-center m-6">
                 <img
                   src={pumpkin}
                   alt="Neem"
@@ -108,7 +108,7 @@ const Header = () => {
             </div>
 
               {/* Right Section: Image */}
-              <div className="w-full md:w-1/2 flex justify-center m-11">
+              <div className="w-full md:w-1/2 flex justify-center m-6">
                 <img
                   src={neem}
                   alt="Neem"
@@ -117,31 +117,6 @@ const Header = () => {
               </div>
             </div>
         </SwiperSlide>
-
-
-        <SwiperSlide>
-          <div className="flex flex-col md:flex-row bg-radial-[at_50%_75%] from-teal-400 via-emerald-600 to-green-950 to-90% justify-around items-center mx-auto pb-2">
-            {/* Left Section: Text (visible on md and up) */}
-            <div className="hidden md:flex md:w-1/2 flex-col md:items-start pl-8 pb-32 mt-16">
-              <p className="text-white p-2 rounded text-4xl md:text-7xl leading-10 md:text-left">
-                <span className="text-5xl md:text-8xl text-green-300 font-bold">Get Your</span>
-                <br />
-                <br />
-              Neem Powder
-              </p>
-            </div>
-
-              {/* Right Section: Image */}
-              <div className="w-full md:w-1/2 flex justify-center m-11">
-                <img
-                  src={neem}
-                  alt="Neem"
-                  className="w-[370px] md:w-[400px] h-full max-h-[250] md:h-[400px] object-cover rounded-md"
-                />
-              </div>
-            </div>
-        </SwiperSlide>
-
 
         </Swiper>
       </section>
