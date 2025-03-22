@@ -53,7 +53,7 @@ const ProductDetail = () => {
         <div className="md:w-1/2">
           <h2 className="text-3xl font-bold mb-4">{product.name}</h2>
           <p className="text-xl text-gray-700">
-            Price: <span className="font-semibold">{product.price || "Contact for price"}/200gm</span>
+            Price: <span className="font-semibold">{product.price || "Contact for price"}</span>
           </p>
           <p className="mt-4 text-gray-600">{product.Description}</p>
           <div className="mt-6 flex items-center">

@@ -30,93 +30,108 @@ import chia5 from './Chia seeds/White Minimalist Tips How To Use Serum Product I
 import methi from './Methi/meethi-images-0.jpg'
 import methi1 from './Methi/meethi-images-1.jpg'
 import methi2 from './Methi/meethi-images-2.jpg'
+import brush1 from './Neem brush/1.png'
+import brush2 from './Neem brush/2.png'
+import brush3 from './Neem brush/3.png'
+import brush4 from './Neem brush/4.png'
+import brush5 from './Neem brush/5.png'
+
 let products = [
   {
     id: 1,
-    name: "Organic Aloe Vera Gel",
-    Description : "Aloe vera is a succulent plant widely recognized in Ayurveda for its soothing and healing properties. Its gel is used both externally and internally to aid in skin hydration, wound healing, and detoxification. ",
+    name: "Organic Aloe Vera Gel (200gm)",
+    Description : "Aloe vera is a succulent plant widely recognized in Ayurveda for its soothing and healing properties. Its gel is used both externally and internally to aid in skin hydration, wound healing, and detoxification.",
     price: "₹199",
-    images: [
-      aloevera_front,
-      alovera_2,
-      alovera_3,
-      alovera_4,
-      alovera_5
-    ],
+    images: [aloevera_front, 
+      alovera_2, 
+      alovera_3, 
+      alovera_4, 
+      alovera_5],
   },
   {
     id: 2,
-    name: "Multani Mitti Face Pack",
+    name: "Multani Mitti Face Pack (200gm)",
     Description : "Multani Mitti is a natural clay prized in Ayurveda for its ability to absorb excess oil, cleanse the skin, and improve complexion. It is commonly used in facial masks to remove impurities, control acne, and brighten the skin.",
     price: "₹178",
-    images: [ 
-      mitti_front,
-      mitti_2,
-      mitti_3,
+    images: [
+      mitti_front, 
+      mitti_2, 
+      mitti_3, 
       mitti_4
     ],
   },
   {
     id: 3,
-    name: "Neem Powder",
-    Description : "Neem powder, made from dried neem leaves, is renowned for its potent antibacterial, antifungal, and anti-inflammatory properties. In Ayurvedic practice, neem is used to purify the blood, support skin health, and promote a clear, glowing complexion",
+    name: "Neem Powder (200gm)",
+    Description : "Neem powder, made from dried neem leaves, is renowned for its potent antibacterial, antifungal, and anti-inflammatory properties.",
     price: "₹249",
-    images: [ 
-      neem_front,
-      neem_2,
-      neem_3,
-      neem_4,
+    images: [
+      neem_front, 
+      neem_2, 
+      neem_3, 
+      neem_4, 
       neem_5
     ],
   },
   {
     id: 4,
-    name: "Gond For Ladoo",
-    Description : "Gond refers to a type of edible gum obtained from acacia or similar trees. In Ayurveda, it is often incorporated into ladoos (traditional sweets) to provide strength and nourishment, especially during colder months.",
+    name: "Gond For Ladoo (200gm)",
+    Description : "Gond refers to a type of edible gum obtained from acacia or similar trees.",
     price: "₹198",
-    images: [  
-     Gond1,
-     Gond2,
-     Gond3,
-     Gond4,
-     Gond5
+    images: [
+      Gond1, 
+      Gond2, 
+      Gond3, 
+      Gond4, 
+      Gond5
     ],
   },
   {
     id: 5,
-    name: "Chia Seeds",
+    name: "Chia Seeds (200gm)",
     Description : "Although originally native to Central and South America, chia seeds have been embraced in Ayurvedic-inspired diets for their high nutritional content.",
     price: "₹152",
-    images: [ 
-     chia1,
-     chia2,
-     chia3,
-     chia4,
-     chia5
+    images: [chia1, 
+      chia2, 
+      chia3, 
+      chia4, 
+      chia5
     ],
   },
   {
     id: 6,
-    name: "Pumpkin Seeds",
-    Description : "Pumpkin seeds are a nutrient-dense food packed with protein, healthy fats, and essential minerals like magnesium, zinc, and iron.",
+    name: "Pumpkin Seeds (200gm)",
+    Description : "Pumpkin seeds are a nutrient-dense food packed with protein, healthy fats, and essential minerals.",
     price: "₹236",
-    images: [  
-     pumpkin1,
-     pumpkin2,
-     pumpkin3,
-     pumpkin4,
-     pumpkin5
+    images: [pumpkin1, 
+      pumpkin2, 
+      pumpkin3, 
+      pumpkin4, 
+      pumpkin5
     ],
   },
   {
     id: 7,
-    name: "Methi",
-    Description : "Methi, or fenugreek, is a herb with a distinct bitter taste and a rich tradition in Ayurveda. It is celebrated for its digestive benefits, ability to balance blood sugar levels, and support for lactation in nursing mothers. ",
+    name: "Methi (200gm)",
+    Description : "Methi, or fenugreek, is a herb with a distinct bitter taste and a rich tradition in Ayurveda.",
     price: "₹190",
-    images: [  
-     methi,
-     methi1,
-     methi2
+    images: [
+      methi,
+      methi1, 
+      methi2
+    ],
+  },
+  {
+    id: 8,
+    name: "Neem Brush",
+    Description : "Neem brushes are known for their antibacterial properties and eco-friendly nature.",
+    price: "₹22 (1 Brush), ₹100 (Set of 5 Brushes)",
+    images: [
+      brush1,
+      brush2, 
+      brush3, 
+      brush4, 
+      brush5
     ],
   },
 ];
