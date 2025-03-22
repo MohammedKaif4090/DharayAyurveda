@@ -37,7 +37,7 @@ const Footer = () => {
           <div>
             <h2 className="text-lg font-semibold">Contact Us</h2>
             <p className="mt-2 text-sm">Email: dharayayurveda@gmail.com</p>
-            <p className="text-sm">Rajvender Singh's Phone: +91 9001908599 </p>
+            <p className="text-sm">Phone: +91 9001908599 </p>
             <p className="text-sm">Address: 141 shri karni uma vihar <br /> Gokulpura <br /> JAIPUR, RAJASTHAN 302012 </p>
           </div>
         </div>
