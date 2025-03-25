@@ -125,7 +125,7 @@ let products = [
     id: 8,
     name: "Neem Brush",
     Description : "Neem brushes are known for their antibacterial properties and eco-friendly nature.",
-    price: "₹22 (1 Brush), ₹200 (Set of 5 Brushes)",
+    price: "₹52 (1 Brush), ₹200 (Set of 5 Brushes)",
     images: [
       brush1,
       brush2, 

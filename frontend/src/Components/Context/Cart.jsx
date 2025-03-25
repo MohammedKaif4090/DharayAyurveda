@@ -13,7 +13,7 @@ const Cart = () => {
     if (item.name.toLowerCase().includes("brush")) {
       const packsOfFive = Math.floor(item.quantity / 5);
       const remaining = item.quantity % 5;
-      return packsOfFive * 200 + remaining * 22;
+      return packsOfFive * 200 + remaining * 52;
     }
     const numericPrice = parseFloat(item.price.replace(/[^0-9.]/g, "")) || 0;
     return numericPrice * item.quantity;
